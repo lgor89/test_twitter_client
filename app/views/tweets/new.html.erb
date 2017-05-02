@@ -1,0 +1,21 @@
+<% if current_user %>
+    <div class="container text-center" >
+      <div class="row" >
+        <div class="col-sm-4">
+
+
+          <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/<%= current_user.name %>">Tweets by IgorPenkovsky</a>
+          <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <%= image_tag @tweet.image_url(:thumb) if @tweet.image? %>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-4">
+
+            <%= render 'form_tweets'%>
+          </div>
+        </div>
+
+      </div>
+    </div>
+<% end %>

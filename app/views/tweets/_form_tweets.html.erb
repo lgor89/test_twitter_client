@@ -1,0 +1,18 @@
+<div class="panel panel-primary">
+  <div class="panel-head" align="center">Create new tweet</div>
+  <div class="panel-body">
+    <%= form_for(@tweet) do |f| %>
+
+        <%= f.label :post_text %>
+        <%= f.text_area :post%>
+
+        <p>
+          <%= f.file_field :image %>
+        </p>
+
+        <%= f.button :tweet, class: "btn btn-primary" %>
+
+    <% end %>
+  </div>
+
+</div>
